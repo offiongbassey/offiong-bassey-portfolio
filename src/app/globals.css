@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+@layer utilities {
+  @keyframes gradientAnimation {
+    0%{
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .annimate-border-btn {
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .annimate-border-btn::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1px;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    background: linear-gradient(45deg, red, yellow, blue, red);
+    z-index: -1;
+    background-size: 300% 300%;
+    animation: gradientAnimation 4s infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  .padding-container {
+    @apply px-4 md:px-14 lg:px-32;
+  }
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+  .primary{
+    @apply px-6 py-4 rounded-full border transition-all duration-500 hover:bg-zinc-900;
+  }
+  .text-hover:hover{
+    @apply bg-zinc-900 rounded-full transition-all duration-500;
+  }
+  .gradient{
+    @apply px-6 py-2 rounded-full border-none bg-gradient-to-r from-orange-300 via-purple-300 to-blue-300 text-black font-medium;
+  }
+ 
+}
