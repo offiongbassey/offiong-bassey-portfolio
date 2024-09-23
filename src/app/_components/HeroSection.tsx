@@ -1,13 +1,14 @@
 "use client";
 
 import Button from "@/components/Button";
+import SocialToggle from "@/components/SocialToggle";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 items-center">
-      <div className="md:flex-1">
+    <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center">
+      <div className="md:flex-1 flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
         <div className="flex items-end justify-end">
           <Image
             src="/hand.png"
@@ -42,6 +43,7 @@ const HeroSection = () => {
         </Button>
       </div>
       <div className="w-full md:flex-1 bg-contain bg-no-repeat bg-center h-[400px] bg-banner" />
+      <SocialToggle />
     </div>
   );
 };

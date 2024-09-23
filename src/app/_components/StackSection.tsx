@@ -1,15 +1,14 @@
 "use client";
 
 import Button from "@/components/Button";
+import StrokeBackground from "@/components/StrokeBackground";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import { useEffect } from "react";
-// import { ReactLenis } from "lenis/react";
 
 const STACK_INFO = [
   "I love programming,",
-  "I love solving demanding problems 👌,",
+  "I love solving complex problems 👌,",
   "and I'm in love with music 🥰."
 ]
 
@@ -30,8 +29,8 @@ const StackSection = () => {
     const yValues = [100, -150, -400];
 
     gsap.utils.toArray(".row").forEach((row, index) => {
-      const cardLeft = row.querySelector(".card-left");
-      const cardRight = row.querySelector(".card-right");
+      const cardLeft = row.querySelector(".card-left") as HTMLElement;
+      const cardRight = row.querySelector(".card-right") as HTMLElement;
 
       gsap.to(cardLeft, {
         x: leftXValues[index],
@@ -66,7 +65,7 @@ const StackSection = () => {
         scrollTrigger: scrollTriggerSettings
     });
 
-    gsap.to("button", {
+    gsap.to(".main button", {
         y: 0,
         opacity: 1,
         delay: 0.25,
@@ -86,11 +85,11 @@ const StackSection = () => {
     for (let i = 1; i <= 3; i++) {
       rows.push(
         <div className="row relative flex justify-center gap-4 w-full" key={i}>
-          <div className="relative rounded-3xl overflow-hidden w-[40%] h-[360px] card-left">
-            <div className="bg-cover bg-center bg-no-repeat full h-full" style={{ backgroundImage: `url(/images/stack/stack-${2 * i - 1}.jpg)`}}  />
+          <div className="relative rounded-3xl overflow-hidden w-[50%] md:w-[40%] h-[150px] md:h-[360px] card-left">
+            <div className="bg-cover bg-center bg-no-repeat w-full h-full" style={{ backgroundImage: `url(/images/stack/stack-${2 * i - 1}.jpg)`}}  />
           </div>
-          <div className="relative rounded-3xl overflow-hidden w-[40%] h-[360px] card-right">
-          <div className="bg-cover bg-center bg-no-repeat full h-full" style={{ backgroundImage: `url(/images/stack/stack-${2 * i}.jpg)`}}  />
+          <div className="relative rounded-3xl overflow-hidden  w-[50%] md:w-[40%] h-[150px] md:h-[360px] card-right">
+          <div className="bg-cover bg-center bg-no-repeat w-full h-full" style={{ backgroundImage: `url(/images/stack/stack-${2 * i}.jpg)`}}  />
           </div>
         </div>
       );
@@ -99,10 +98,11 @@ const StackSection = () => {
     return rows;
   };
   return (
-  
-    <section className="main relative flex flex-col justify-center overflow-x-hidden items-center mt-20">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center justify-center flex flex-col">
-        <div className="flex flex-col items-center justify-center my-4">
+    <section className="main max-container relative flex flex-col justify-center overflow-x-hidden items-center md:mt-20">
+      <StrokeBackground />
+      <h2 className="py-4 md:py-10 text-4xl md:text-7xl font-semibold text-center">Languages, <span className="bg-gradient-to-tr from-purple-900 via-gray-800 to-indigo-900">Frameworks <br/> & other</span> Tools</h2>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center justify-center flex flex-col w-full">
+        <div className="flex flex-col items-center justify-center px-4 md:px-0 my-4">
           {STACK_INFO.map((info, index) => (
           <div key={index} className="stack-info h-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}}>
             <p className="relative translate-y-10 text-xl">{info}</p>
