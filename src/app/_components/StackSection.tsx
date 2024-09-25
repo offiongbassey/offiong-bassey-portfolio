@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import StrokeBackground from "@/components/StrokeBackground";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Grip } from "lucide-react";
 import { useEffect } from "react";
 
 const STACK_INFO = [
@@ -85,10 +86,10 @@ const StackSection = () => {
     for (let i = 1; i <= 3; i++) {
       rows.push(
         <div className="row relative flex justify-center gap-4 w-full" key={i}>
-          <div className="relative rounded-3xl overflow-hidden w-[50%] md:w-[40%] h-[150px] md:h-[360px] card-left">
+          <div className="relative rounded-3xl overflow-hidden w-[50%] md:w-[30%] h-[70px] md:h-[360px] card-left">
             <div className="bg-cover bg-center bg-no-repeat w-full h-full" style={{ backgroundImage: `url(/images/stack/stack-${2 * i - 1}.jpg)`}}  />
           </div>
-          <div className="relative rounded-3xl overflow-hidden  w-[50%] md:w-[40%] h-[150px] md:h-[360px] card-right">
+          <div className="relative rounded-3xl overflow-hidden  w-[50%] md:w-[30%] h-[70px] md:h-[360px] card-right">
           <div className="bg-cover bg-center bg-no-repeat w-full h-full" style={{ backgroundImage: `url(/images/stack/stack-${2 * i}.jpg)`}}  />
           </div>
         </div>
@@ -100,11 +101,11 @@ const StackSection = () => {
   return (
     <section className="main max-container relative flex flex-col justify-center overflow-x-hidden items-center md:mt-20">
       <StrokeBackground />
-      <h2 className="py-4 md:py-10 text-4xl md:text-7xl font-semibold text-center">Languages, <span className="bg-gradient-to-tr from-purple-900 via-gray-800 to-indigo-900">Frameworks <br/> & other</span> Tools</h2>
+      <h2 className="py-4 md:py-10 text-4xl md:text-7xl font-semibold text-center">Languages, <span className="bg-gradient-to-tr dark:from-purple-900 dark:via-gray-800 dark:to-indigo-900 from-purple-300 via-green-300 to-indigo-300">Frameworks <br/> & other</span> Tools</h2>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center justify-center flex flex-col w-full">
         <div className="flex flex-col items-center justify-center px-4 md:px-0 my-4">
           {STACK_INFO.map((info, index) => (
-          <div key={index} className="stack-info h-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}}>
+          <div key={index} className="stack-info hidden md:block h-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}}>
             <p className="relative translate-y-10 text-xl">{info}</p>
           </div>
           ))}
@@ -112,7 +113,7 @@ const StackSection = () => {
 
         <div className="btn">
           <Button type="button" variant="primary">
-            My Github
+          <Grip />
           </Button>
         </div>
       </div>
