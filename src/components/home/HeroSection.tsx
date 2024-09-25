@@ -1,7 +1,6 @@
 "use client";
 
 import Button from "@/components/Button";
-import SocialToggle from "@/components/SocialToggle";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
@@ -18,13 +17,12 @@ const HeroSection = () => {
             height={60}
           />
         </div>
-        <h4 className="text-3xl md:text-7xl dark:text-white text-black font-pacifico">An incredible</h4>
+        <h4 className="text-3xl md:text-7xl dark:text-white text-black font-pacifico">
+          An incredible
+        </h4>
         <h1 className="text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
           Software Engineer
         </h1>
-        {/* <h1 className="text-5xl md:text-6xl bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 dark:text-transparent text-[#000] font-semibold animate-gradient">
-          Software Engineer
-        </h1> */}
         <div className="min-h-20 py-2">
           <TypeAnimation
             sequence={[
@@ -46,7 +44,6 @@ const HeroSection = () => {
         </Button>
       </div>
       <div className="w-full md:flex-1 bg-contain bg-no-repeat bg-center h-[200px] md:h-[400px] bg-banner" />
-      <SocialToggle />
     </div>
   );
 };

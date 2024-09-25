@@ -10,6 +10,7 @@ import Link from "next/link";
 
 const ProjectSection = () => {
   const [projects, setProjects] = useState(PROJECTS);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -83,11 +84,15 @@ const ProjectSection = () => {
             height={100}
           />
         </div>
-        <Button type="button" variant="primary" className="hidden hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent md:block h-14 md:h-20 w-32 md:w-80">
+        <Button
+          type="button"
+          variant="primary"
+          className="hidden hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent md:block h-14 md:h-20 w-32 md:w-80"
+        >
           Explore All
         </Button>
       </div>
-      {projects.map((project, index) => (
+      {projects.slice(0, 3).map((project, index) => (
         <div
           key={project.id}
           className={`project-row group px-4 md:px-0 flex flex-col md:flex-row ${
@@ -108,7 +113,11 @@ const ProjectSection = () => {
               } py-4`}
             >
               <Link href={project.link} target="_blank">
-                <Button type="button" variant="primary" className="hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent">
+                <Button
+                  type="button"
+                  variant="primary"
+                  className="hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent"
+                >
                   View Project
                 </Button>
               </Link>
@@ -125,9 +134,7 @@ const ProjectSection = () => {
             <div className="hidden group-hover:grid grid-cols-6 gap-4 bg-gray-700/50 p-4 w-full">
               {project.images.map((img, index) => (
                 <div
-                  onClick={() =>
-                    handleImage({ project_id: project.id, index })
-                  }
+                  onClick={() => handleImage({ project_id: project.id, index })}
                   key={index}
                   className="cursor-pointer bg-cover bg-center bg-no-repeat md:p-6 lg:p-10 rounded-3xl border-[#d9edf9] border-2"
                   style={{ backgroundImage: `url(${img})` }}
@@ -147,9 +154,7 @@ const ProjectSection = () => {
             <div className="hidden group-hover:grid grid-cols-6 gap-2 md:gap-4 bg-gray-700/50 p-4 w-full">
               {project.images.map((img, index) => (
                 <div
-                  onClick={() =>
-                    handleImage({ project_id: project.id, index })
-                  }
+                  onClick={() => handleImage({ project_id: project.id, index })}
                   key={index}
                   className="cursor-pointer bg-cover bg-center bg-no-repeat h-8 md:p-10 rounded-3xl border-[#d9edf9] border-2"
                   style={{ backgroundImage: `url(${img})` }}
@@ -157,12 +162,14 @@ const ProjectSection = () => {
               ))}
             </div>
           </div>
-           <div
+          <div
             className={`md:hidden w-full md:w-[30%] card-down ${
               index % 2 ? "text-left" : "text-left md:text-right"
             }`}
           >
-            <h2 className="text-4xl md:text-6xl font-extrabold">{project.title}</h2>
+            <h2 className="text-4xl md:text-6xl font-extrabold">
+              {project.title}
+            </h2>
             <p>{project.description}</p>
             <div
               className={`flex items-center ${
@@ -170,24 +177,39 @@ const ProjectSection = () => {
               } py-4`}
             >
               <Link href={project.link} target="_blank">
-                <Button type="button" variant="primary" className="hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent">
+                <Button
+                  type="button"
+                  variant="primary"
+                  className="hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent"
+                >
                   View Project
                 </Button>
               </Link>
             </div>
           </div>
-          
         </div>
       ))}
-        <div className="md:hidden flex items-center justify-center">
-            <Button type="button" variant="primary" className="h-14 md:h-20 w-32 md:w-80 hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent">
-              Explore All
-            </Button>
-        </div>
+      <div className="md:hidden flex items-center justify-center">
+        <Button
+          type="button"
+          variant="primary"
+          className="h-14 md:h-20 w-32 md:w-80 hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent"
+        >
+          Explore All
+        </Button>
+      </div>
       <div className="padding-container mt-10 text-center flex justify-center flex-col items-center">
-        <h4 className="text-3xl md:text-5xl font-semibold py-4 bg-gradient-to-r dark:from-green-300 dark:to-purple-300 from-green-800 to-purple-800 bg-clip-text text-transparent">Wow! You&apos;ve reached this part?</h4>
+        <h4 className="text-3xl md:text-5xl font-semibold py-4 bg-gradient-to-r dark:from-green-300 dark:to-purple-300 from-green-800 to-purple-800 bg-clip-text text-transparent">
+          Wow! You&apos;ve reached this part?
+        </h4>
         <p className="text-medium md:text-3xl font-[600] w-full md:max-w-[710px] dark:bg-gradient-to-tr from-[#f6f3d2] via-green-50 to-purple-50 bg-clip-text dark:text-transparent text-gray-600">
-        I appreciate your time and visit. I&apos;m open to collaborating, learning and building. Hit me up <span className="text-white">🙇‍♂️</span> <Link href="mailto:offiongbassidev@gmail.com" target="_blank">offiongbassidev@gmail.com</Link> </p>
+          I appreciate your time and visit. I&apos;m open to collaborating,
+          learning and building. Hit me up{" "}
+          <span className="text-white">🙇‍♂️</span>{" "}
+          <Link href="mailto:offiongbassidev@gmail.com" target="_blank">
+            offiongbassidev@gmail.com
+          </Link>{" "}
+        </p>
       </div>
     </section>
   );
