@@ -1,26 +1,30 @@
 "use client";
 
 import Button from "@/components/Button";
+import SocialToggle from "@/components/SocialToggle";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 items-center">
-      <div className="md:flex-1">
+    <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center">
+      <div className="md:flex-1 flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
         <div className="flex items-end justify-end">
           <Image
             src="/hand.png"
             alt="Dev"
             width={60}
-            className="hover:scale-125 border-gray-900 border p-2 rounded-full hover:-rotate-12 transition-all duration-500"
+            className="hover:scale-125 dark:border-gray-900 border-gray-200 border p-2 rounded-full hover:-rotate-12 transition-all duration-500"
             height={60}
           />
         </div>
-        <h4 className="text-3xl md:text-5xl text-white font-semibold">An incredible</h4>
-        <h1 className="text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-orange-300 via-purple-200 to-blue-400 font-semibold animate-gradient">
+        <h4 className="text-3xl md:text-7xl dark:text-white text-black font-pacifico">An incredible</h4>
+        <h1 className="text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
           Software Engineer
         </h1>
+        {/* <h1 className="text-5xl md:text-6xl bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 dark:text-transparent text-[#000] font-semibold animate-gradient">
+          Software Engineer
+        </h1> */}
         <div className="min-h-20 py-2">
           <TypeAnimation
             sequence={[
@@ -41,7 +45,8 @@ const HeroSection = () => {
           Get in Touch
         </Button>
       </div>
-      <div className="w-full md:flex-1 bg-contain bg-no-repeat bg-center h-[400px] bg-banner" />
+      <div className="w-full md:flex-1 bg-contain bg-no-repeat bg-center h-[200px] md:h-[400px] bg-banner" />
+      <SocialToggle />
     </div>
   );
 };

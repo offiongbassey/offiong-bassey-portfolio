@@ -7,7 +7,7 @@ type Props = {
 
 const Button = ({ variant = 'primary', className, ...props }: Props) => {
     return (
-        <button className={` ${variant} ${className}`} {...props}>
+        <button className={` ${className} ${variant}`} {...props}>
             
         </button>
     )
