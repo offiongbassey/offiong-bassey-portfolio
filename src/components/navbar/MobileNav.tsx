@@ -11,11 +11,13 @@ onClose: () => void;
 const MobileNav = ({ open, onClose }: Props) => {
     return (
         <div className={`fixed inset-0 ${open ? "visible bg-black" : "invisible"} transition-all duration-500 z-50 h-screen p-4`} onClick={onClose}>
-            <div className="w-full h-full p-2" onClick={(e) => e.stopPropagation()}>
+            <div className="w-full h-full p-2" onClick={onClose}>
             <StrokeBackground/>
                 <div onClick={onClose} className="flex items-end justify-end"><X /></div>
                 <div className="flex flex-col gap-4 h-full items-center justify-center">
-                    <Button type="button" variant="primary">Projects</Button>
+                    <Link href="/projects">
+                        <Button type="button" variant="primary">Projects</Button>
+                    </Link>
                     <Link href="mailto:offiongbassidev@gmail.com" target="_blank"><Button type="button" variant="primary">Contact me</Button></Link>
                 </div>
             </div>

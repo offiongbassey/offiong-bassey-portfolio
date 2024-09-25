@@ -13,8 +13,7 @@ export const PROJECTS = [
         ],
         link: "https://github.com/offiongbassey/whatsapp_fe",
         github_link: "",
-        default_image_index: 0
-        
+        default_image_index: 0, 
     },
     {
         id: "a6beab01-59e4-4f2f-9c3e-bbfca09f0ef9",
@@ -29,7 +28,7 @@ export const PROJECTS = [
         ],
         link: "https://www.tryklas.com",
         github_link: "",
-        default_image_index: 0
+        default_image_index: 0,
     },
     {
         id: "42944e71-a2b9-4b71-9148-16124297c005",
@@ -40,12 +39,36 @@ export const PROJECTS = [
             "/images/projects/whatsapp-2.png",
             "/images/projects/whatsapp-3.png",
             "/images/projects/whatsapp-4.png",
-            "/images/projects/whatsapp-5.png",
-            "/images/projects/whatsapp-6.png",
-            
         ],
         link: "https://github.com/offiongbassey/whatsapp_fe",
         github_link: "https://github.com/offiongbassey/whatsapp_fe",
+        default_image_index: 0
+    },
+    {
+        id: "42947a71-c2b9-4b71-9008-12324297c005",
+        title: "NT-Plus",
+        description: "Streamlining and simplifying company/business registrations with CAC.",
+        images: [
+            "/images/projects/ntplus-1.png",
+            "/images/projects/ntplus-2.png",
+            "/images/projects/ntplus-3.png",
+        ],
+        link: "https://service.ntplus.net",
+        github_link: "",
+        default_image_index: 0
+    },
+    {
+        id: "42947a71-c2b9-4b71-9008-12324297c005",
+        title: "Rainyvest",
+        description: "Agric Investment platform - Digitalized stock trading",
+        images: [
+            "/images/projects/rainyvest-1.png",
+            "/images/projects/rainyvest-2.png",
+            "/images/projects/rainyvest-3.png",
+            "/images/projects/rainyvest-4.png",
+        ],
+        link: "https://rainyvest-frontend.vercel.app",
+        github_link: "https://github.com/offiongbassey/rainyvest-frontend",
         default_image_index: 0
     },
     
