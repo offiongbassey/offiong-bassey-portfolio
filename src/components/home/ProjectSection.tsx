@@ -19,8 +19,8 @@ const ProjectSection = () => {
     const yValues = [-10, -10, -10];
 
     gsap.utils.toArray(".project-row").forEach((row, index) => {
-      const cardLeft = row.querySelector(".project-left") as HTMLElement;
-      const cardRight = row.querySelector(".project-right") as HTMLElement;
+      const cardLeft = (row as HTMLElement).querySelector(".project-left") as HTMLElement;
+      const cardRight = (row as HTMLElement).querySelector(".project-right") as HTMLElement;
 
       gsap.to(cardLeft, {
         x: leftXValues[index],
