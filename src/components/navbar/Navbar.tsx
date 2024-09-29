@@ -62,7 +62,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <ul className="flex md:hidden gap-6 items-center justify-center font-medium">
+        <ul className="flex md:hidden items-center justify-center font-medium">
           <NavItem icon={audioPlay ? AudioLines : ListMusic} onClick={() => setAudioPlay((prev) => !prev)} />
           <NavItem icon={theme === "light" ? MoonStar : Sun} onClick={() => setTheme(theme === "dark" ? "light": "dark")} />
           <NavItem icon={Menu} onClick={() => setToggle(true)} />

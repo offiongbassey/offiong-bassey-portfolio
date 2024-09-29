@@ -190,13 +190,15 @@ const ProjectSection = () => {
         </div>
       ))}
       <div className="md:hidden flex items-center justify-center">
-        <Button
-          type="button"
-          variant="primary"
-          className="h-14 md:h-20 w-32 md:w-80 hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent"
-        >
-          Explore All
-        </Button>
+        <Link href="/projects">
+          <Button
+            type="button"
+            variant="primary"
+            className="h-14 md:h-20 w-32 md:w-80 hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent"
+          >
+            Explore All
+          </Button>
+        </Link>
       </div>
       <div className="padding-container mt-10 text-center flex justify-center flex-col items-center">
         <h4 className="text-3xl md:text-5xl font-semibold py-4 bg-gradient-to-r dark:from-green-300 dark:to-purple-300 from-green-800 to-purple-800 bg-clip-text text-transparent">

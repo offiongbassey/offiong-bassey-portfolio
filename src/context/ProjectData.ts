@@ -45,7 +45,7 @@ export const PROJECTS = [
         default_image_index: 0
     },
     {
-        id: "42947a71-c2b9-4b71-9008-12324297c005",
+        id: "42ghia76-c2b9-4b71-9008-1290o297c005",
         title: "NT-Plus",
         description: "Streamlining and simplifying company/business registrations with CAC.",
         images: [
@@ -58,7 +58,7 @@ export const PROJECTS = [
         default_image_index: 0
     },
     {
-        id: "42947a71-c2b9-4b71-9008-12324297c005",
+        id: "yu747a71-g6b9-4b71-8768-123256trc005",
         title: "Rainyvest",
         description: "Agric Investment platform - Digitalized stock trading",
         images: [
