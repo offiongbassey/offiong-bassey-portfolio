@@ -5,6 +5,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
+  
   return (
     <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center">
       <div className="md:flex-1 flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
