@@ -84,13 +84,15 @@ const ProjectSection = () => {
             height={100}
           />
         </div>
-        <Button
-          type="button"
-          variant="primary"
-          className="hidden hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent md:block h-14 md:h-20 w-32 md:w-80"
-        >
-          Explore All
-        </Button>
+        <Link href="/projects">
+          <Button
+            type="button"
+            variant="primary"
+            className="hidden hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent md:block h-14 md:h-20 w-32 md:w-80"
+          >
+            Explore All
+          </Button>
+        </Link>
       </div>
       {projects.slice(0, 3).map((project, index) => (
         <div
