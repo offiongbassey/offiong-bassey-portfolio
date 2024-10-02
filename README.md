@@ -1,6 +1,6 @@
 <h3 align="center">offiongbassey.com.ng</h3> 
 
-<img width="1222" alt="portfolio-1" src="https://github.com/user-attachments/assets/52b7da5d-403b-46ef-a6b7-148d35107f47">
+<img width="1222" alt="portfolio-1" src="https://res.cloudinary.com/dfhabqprq/image/upload/v1727884533/offiongbassey_fgpdad.png">
 <hr/>
 <h1>Can I fork this repo?</h1>
 <p>Yes but hold on! This is my portfolio which showcases my skills, expertise. If your intention is purely for learning, feel free to fork it and explore. However, if you plan to use it for your own portfolio, remember that you can do even better – learn the patterns here and create something distinct and original.</p>
