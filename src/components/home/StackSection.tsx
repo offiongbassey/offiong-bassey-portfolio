@@ -108,7 +108,7 @@ const StackSection = () => {
     return rows;
   };
   return (
-    <section className="main max-container relative flex flex-col justify-center overflow-x-hidden items-center md:mt-20">
+    <section className="main max-container relative flex flex-col justify-center overflow-x-hidden items-center">
       <StrokeBackground />
       <h2 className="py-4 md:py-10 text-4xl md:text-7xl font-semibold text-center">
         Languages,{" "}

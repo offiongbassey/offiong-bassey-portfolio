@@ -8,11 +8,9 @@ import { ReactLenis } from "lenis/react";
 export default function Home() {
   return (
     <ReactLenis root >
-      <main className="py-8 md:py-20">
         <HeroSection />
         <StackSection/>
         <ProjectSection/>
-      </main>
     </ReactLenis>
   );
 }

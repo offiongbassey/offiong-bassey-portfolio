@@ -7,8 +7,8 @@ import { TypeAnimation } from "react-type-animation";
 const HeroSection = () => {
   
   return (
-    <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center">
-      <div className="md:flex-1 flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
+    <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center py-8 md:pt-20">
+      <div className="md:w-[50%] flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
         <div className="flex items-end justify-end">
           <Image
             src="/hand.png"
@@ -44,7 +44,7 @@ const HeroSection = () => {
           Get in Touch
         </Button>
       </div>
-      <div className="w-full md:flex-1 bg-contain bg-no-repeat bg-center h-[200px] md:h-[400px] bg-banner" />
+      <div className="w-full md:w-[50%] bg-contain bg-no-repeat bg-center h-[200px] md:h-[450px] bg-banner" />
     </div>
   );
 };
