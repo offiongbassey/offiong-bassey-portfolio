@@ -2,10 +2,10 @@
 
 import Button from "@/components/Button";
 import Image from "next/image";
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
-  
   return (
     <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center py-8 md:pt-20">
       <div className="md:w-[50%] flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
@@ -36,13 +36,15 @@ const HeroSection = () => {
             className=""
           />
         </div>
-        <Button
-          type="button"
-          variant="gradient"
-          className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
-        >
-          Get in Touch
-        </Button>
+        <Link href="mailto:offiongbassidev@gmail.com" target="_blank">
+          <Button
+            type="button"
+            variant="gradient"
+            className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
+          >
+            Get in Touch
+          </Button>
+        </Link>
       </div>
       <div className="w-full md:w-[50%] bg-contain bg-no-repeat bg-center h-[200px] md:h-[450px] bg-banner" />
     </div>

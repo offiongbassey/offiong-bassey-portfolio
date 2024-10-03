@@ -1,4 +1,14 @@
-export const PROJECTS = [
+export type ProjectType = {
+    id: string;
+    title: string;
+    description: string;
+    images: string[],
+    link: string,
+    github_link?: string,
+    default_image_index: number;
+}
+
+export const PROJECTS: ProjectType[] = [
     {
         id: "420fd351-5fed-4e49-9628-4c7a32110ab4",
         title: "UNIVR",
@@ -40,7 +50,7 @@ export const PROJECTS = [
             "/images/projects/whatsapp-3.png",
             "/images/projects/whatsapp-4.png",
         ],
-        link: "https://github.com/offiongbassey/whatsapp_fe",
+        link: "https://www.linkedin.com/posts/offiong-bassey-dev_whatsapp-web-project-kindly-rate-and-share-activity-7156054147526492160-HDJD?utm_source=share&utm_medium=member_desktop",
         github_link: "https://github.com/offiongbassey/whatsapp_fe",
         default_image_index: 0
     },
@@ -68,7 +78,6 @@ export const PROJECTS = [
             "/images/projects/rainyvest-4.png",
         ],
         link: "https://rainyvest-frontend.vercel.app",
-        github_link: "https://github.com/offiongbassey/rainyvest-frontend",
         default_image_index: 0
     },
     
