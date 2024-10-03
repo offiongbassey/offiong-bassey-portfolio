@@ -30,8 +30,12 @@ const StackSection = () => {
     const yValues = [100, -150, -400];
 
     gsap.utils.toArray(".row").forEach((row, index) => {
-      const cardLeft = (row as HTMLElement).querySelector(".card-left") as HTMLElement;
-      const cardRight = (row as HTMLElement).querySelector(".card-right") as HTMLElement;
+      const cardLeft = (row as HTMLElement).querySelector(
+        ".card-left"
+      ) as HTMLElement;
+      const cardRight = (row as HTMLElement).querySelector(
+        ".card-right"
+      ) as HTMLElement;
 
       gsap.to(cardLeft, {
         x: leftXValues[index],
