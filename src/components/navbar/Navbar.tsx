@@ -1,12 +1,11 @@
 "use client";
 
 import Button from "@/components/Button";
-import { AudioLines, ListMusic, LucideIcon, Menu, MoonStar, Sun } from "lucide-react";
+import { LucideIcon, Menu, MoonStar, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
-import SocialToggle from "../SocialToggle";
 
 type NavItemProp = {
   title?: string;
@@ -17,7 +16,6 @@ type NavItemProp = {
 const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [audioPlay, setAudioPlay] = useState(false);
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {

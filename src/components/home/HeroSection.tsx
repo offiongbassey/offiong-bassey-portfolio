@@ -4,11 +4,10 @@ import Button from "@/components/Button";
 import GithubIcon from "@/svg/GithubIcon";
 import LinkedInIcon from "@/svg/LinkedInIcon";
 import TwitterIcon from "@/svg/TwitterIcon";
-import { GitBranch, GraduationCap } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -23,7 +22,7 @@ const HeroSection = () => {
         </h4>
 
         <div className="min-h-20 py-2">
-          <p className="text-lg">Hi 👋, I'm Offiong Bassey, a machine learning engineer and researcher specializing in <b>Natural Language Processing (NLP)</b>. My work spans audio processing, speech synthesis, machine translation, and real-time conversational AI, with a particular focus on low-resource and multilingual languages.</p>
+          <p className="text-lg">Hi 👋, I&apos;m Offiong Bassey, a machine learning engineer and researcher specializing in <b>Natural Language Processing (NLP)</b>. My work spans audio processing, speech synthesis, machine translation, and real-time conversational AI, with a particular focus on low-resource and multilingual languages.</p>
           <p className="text-lg my-4">My research explores <b>how multilingual models can perform efficiently in low-resource settings</b>, especially under limited data conditions. At <Link className="font-semibold" href="https://www.plotweaver.app/" target="_blank">Plotweaver</Link>, where I currently work as a Machine Learning Engineer, I apply this to improving the scalability and efficiency of language models for practical, real-world applications.</p>
           <p className="text-lg">Outside of work, I enjoy reading, watching movies, singing classical choral music, playing the trumpet, and listening to podcasts on AI and technology.
           </p>
