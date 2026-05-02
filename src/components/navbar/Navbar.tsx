@@ -1,12 +1,11 @@
 "use client";
 
 import Button from "@/components/Button";
-import { AudioLines, ListMusic, LucideIcon, Menu, MoonStar, Sun } from "lucide-react";
+import { LucideIcon, Menu, MoonStar, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
-import SocialToggle from "../SocialToggle";
 
 type NavItemProp = {
   title?: string;
@@ -17,7 +16,6 @@ type NavItemProp = {
 const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [audioPlay, setAudioPlay] = useState(false);
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
@@ -46,31 +44,38 @@ const Navbar = () => {
     <Fragment>
       <nav className="padding-container max-container py-4 flex items-center justify-between">
         <Link href="/" className="font-medium text-lg hover:animate-bounce">
-          Offi ✌️
+          Offiong Bassey
         </Link>
         <ul className="hidden md:flex gap-6 items-center justify-between font-medium">
-          <NavItem icon={audioPlay ? AudioLines : ListMusic} onClick={() => setAudioPlay((prev) => !prev)} />
-          <NavItem icon={theme === "light" ? MoonStar : Sun} onClick={() => setTheme(theme === "dark" ? "light": "dark")} />
-          <Link href="/projects">
-            <NavItem title="Projects"/>
+          {/* <NavItem icon={audioPlay ? AudioLines : ListMusic} onClick={() => setAudioPlay((prev) => !prev)} /> */}
+         
+          <Link href="/">
+            <NavItem title="About"/>
           </Link>
+          <Link href="/publications">
+            <NavItem title="Publications"/>
+          </Link>
+          {/* <Link href="/projects">
+            <NavItem title="Projects"/>
+          </Link> */}
           <li className="annimate-border-btn cursor-pointer p-[0.5px]">
-            <Link href="mailto:offiongbassidev@gmail.com" target="_blank">
+            <Link href="/offiong-bassey-cv.pdf" target="_blank">
               <Button type="button" variant="primary" className="bg-black">
-                Contact me
+                Download CV
               </Button>
             </Link>
           </li>
+          <NavItem icon={theme === "light" ? MoonStar : Sun} onClick={() => setTheme(theme === "dark" ? "light": "dark")} />
         </ul>
         <ul className="flex md:hidden items-center justify-center font-medium">
-          <NavItem icon={audioPlay ? AudioLines : ListMusic} onClick={() => setAudioPlay((prev) => !prev)} />
+          {/* <NavItem icon={audioPlay ? AudioLines : ListMusic} onClick={() => setAudioPlay((prev) => !prev)} /> */}
           <NavItem icon={theme === "light" ? MoonStar : Sun} onClick={() => setTheme(theme === "dark" ? "light": "dark")} />
           <NavItem icon={Menu} onClick={() => setToggle(true)} />
         </ul>
       </nav>
-      <SocialToggle />
+      {/* <SocialToggle /> */}
       <MobileNav open={toggle} onClose={() => setToggle(false)} />
-      {audioPlay && <audio src="/alan-walker.mp3" autoPlay loop></audio>}
+      {/* {audioPlay && <audio src="/alan-walker.mp3" autoPlay loop></audio>} */}
     </Fragment>
   );
 };

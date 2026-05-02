@@ -19,7 +19,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Offiong Bassey - Portfolio",
   description:
-    "An incredible software engineer, passionate about solving complex problems and building innocative products that benefit humanity.",
+    "Offiong Bassey is an incredible software engineer, passionate about solving complex problems and building innovative products that benefit humanity.",
 };
 
 export default function RootLayout({
