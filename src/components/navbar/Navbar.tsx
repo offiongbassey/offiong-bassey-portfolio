@@ -44,7 +44,7 @@ const Navbar = () => {
     <Fragment>
       <nav className="padding-container max-container py-4 flex items-center justify-between">
         <Link href="/" className="font-medium text-lg hover:animate-bounce">
-          Offiong Bassey
+          Offiong Bassey Edet
         </Link>
         <ul className="hidden md:flex gap-6 items-center justify-between font-medium">
           {/* <NavItem icon={audioPlay ? AudioLines : ListMusic} onClick={() => setAudioPlay((prev) => !prev)} /> */}

@@ -21,7 +21,7 @@ const MobileNav = ({ open, onClose }: Props) => {
                     <Link href="/publications">
                         <Button type="button" variant="primary" className="bg-black  w-40 h-12 text-white">Publications</Button>
                     </Link>
-                    <Link href="mailto:offiongbassidev@gmail.com" target="_blank"><Button type="button" variant="primary" className="bg-black  w-40 h-12 text-white">Download CV</Button></Link>
+                    <Link href="/offiong-bassey-cv.pdf" target="_blank"><Button type="button" variant="primary" className="bg-black  w-40 h-12 text-white">Download CV</Button></Link>
                 </div>
             </div>
         </div>
