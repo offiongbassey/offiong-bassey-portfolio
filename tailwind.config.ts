@@ -15,7 +15,7 @@ const config: Config = {
         light_bg: "#f3f9fc"
       },
       backgroundImage: {
-        "banner": "url('/display-dark.png')",
+        "banner": "url('/offiong.jpeg')",
       }
     },
   },

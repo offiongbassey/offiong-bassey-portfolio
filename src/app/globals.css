@@ -82,7 +82,7 @@ body {
     @apply mx-auto max-w-[1440px];
   }
   .primary{
-    @apply px-6 py-4 rounded-full border transition-all duration-500 hover:bg-zinc-950;
+    @apply px-2 py-1 md:px-6 md:py-4 rounded-full border transition-all duration-500 hover:bg-zinc-950 hover:text-white;
   }
   .gradient{
     @apply px-6 py-2 rounded-full border-none bg-gradient-to-r from-orange-300 via-purple-300 to-blue-300 text-black font-medium;
