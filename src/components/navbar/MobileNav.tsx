@@ -15,10 +15,13 @@ const MobileNav = ({ open, onClose }: Props) => {
             <StrokeBackground/>
                 <div onClick={onClose} className="flex items-end justify-end"><X /></div>
                 <div className="flex flex-col gap-4 h-full items-center justify-center">
-                    <Link href="/projects">
-                        <Button type="button" variant="primary" className="bg-black text-white">Projects</Button>
+                <Link href="/">
+                        <Button type="button" variant="primary" className="bg-black w-40 h-12 text-white">About</Button>
                     </Link>
-                    <Link href="mailto:offiongbassidev@gmail.com" target="_blank"><Button type="button" variant="primary" className="bg-black text-white">Contact me</Button></Link>
+                    <Link href="/publications">
+                        <Button type="button" variant="primary" className="bg-black  w-40 h-12 text-white">Publications</Button>
+                    </Link>
+                    <Link href="mailto:offiongbassidev@gmail.com" target="_blank"><Button type="button" variant="primary" className="bg-black  w-40 h-12 text-white">Download CV</Button></Link>
                 </div>
             </div>
         </div>
