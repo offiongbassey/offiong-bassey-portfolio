@@ -2,8 +2,8 @@
 
 import Button from "@/components/Button";
 import { PUBLICATIONS } from "@/components/publications/data";
-import PublicationItem, { PublicationItemProps } from "@/components/publications/PublicationItem";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import PublicationItem from "@/components/publications/PublicationItem";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 
@@ -35,8 +35,8 @@ export default function Publication() {
         </Link>
         <hr/>
 
-        {PUBLICATIONS.map((article) => (
-            <PublicationItem title={article.title} conference={article.conference} description={article.description} link={article.link} />
+        {PUBLICATIONS.map((article, key) => (
+            <PublicationItem key={key} title={article.title} conference={article.conference} description={article.description} link={article.link} />
         )) }
    </div>
   );
