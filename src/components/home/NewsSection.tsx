@@ -5,6 +5,10 @@ const NewsSection = () => {
                 <h4 className="text-2xl mt-6">News</h4>
                 <div className="flex flex-col gap-6 mt-6">
                     <div className="flex items-start justify-start gap-20 py-4">
+                            <h4 className="">June 2026</h4>
+                            <p>Paper accepted to <b>Interspeech 2026</b> - Sydney, Australia.</p>
+                    </div>
+                    <div className="flex items-start justify-start gap-20 py-4">
                             <h4 className="">Mar 2026</h4>
                             <p>Paper (<b>Adapting Foundational ASR Models to Efik</b>) accepted to <b>Speakable @ LREC 2026</b> - Spain.</p>
                     </div>
