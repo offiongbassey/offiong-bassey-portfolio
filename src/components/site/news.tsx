@@ -5,7 +5,7 @@ import { news } from "@/data/site";
 export function News() {
   return (
     <section id="news" className="mx-auto max-w-5xl px-6 py-16 sm:px-8">
-      <SectionHeading eyebrow="§ 4" title="News" />
+      <SectionHeading eyebrow="#4" title="News" />
 
       <ol className="mt-8 border-l border-rule">
         {news.map((item, i) => (

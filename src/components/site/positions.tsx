@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Positions() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 sm:px-8">
-      <SectionHeading eyebrow="§ 5" title="Positions" />
+      <SectionHeading eyebrow="#5" title="Positions" />
 
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2">
         {positions.map((p) => (
