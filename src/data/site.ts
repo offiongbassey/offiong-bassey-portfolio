@@ -8,7 +8,7 @@ export const person = {
   email: "offiongbassey99@gmail.com",
   affiliation: "Plotweaver · EfikAI · Machine Learning Collective",
   bio: [
-    "Hi, I'm Offiong, a machine learning engineer and researcher specialising in natural language processing, with work spanning audio processing, speech synthesis, machine translation, and real-time conversational AI. My research centres on low-resource and multilingual language settings, particularly Efik, an extremely low-resource tonal language spoken in southeastern Nigeria.",
+    "Hi, I'm Offiong Bassey, a machine learning engineer and researcher specialising in natural language processing, with work spanning audio processing, speech synthesis, machine translation, and real-time conversational AI. My research centres on low-resource and multilingual language settings, particularly Efik, an extremely low-resource tonal language spoken in southeastern Nigeria.",
     "I currently work as a Machine Learning Research Engineer at Plotweaver, where I build multilingual speech systems for African languages, and I founded EfikAI, a research initiative building the first publicly documented machine translation, speech recognition, and text-to-speech systems for Efik. I'm also a volunteer researcher with Howard University's NLP Group, a Machine Learning Researcher with Machine Learning Collective, and a research community member of Masakhane.",
   ],
   interests: [
