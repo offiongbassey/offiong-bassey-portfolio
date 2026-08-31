@@ -13,7 +13,7 @@ export function Publications() {
   return (
     <section id="publications" className="mx-auto max-w-5xl px-6 py-16 sm:px-8">
       <SectionHeading
-        eyebrow="§ 2"
+        eyebrow="#2"
         title="Selected Publications"
         action={
           <Link
