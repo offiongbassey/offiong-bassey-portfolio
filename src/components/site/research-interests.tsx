@@ -3,7 +3,7 @@ import { person } from "@/data/site";
 export function ResearchInterests() {
   return (
     <section id="research" className="mx-auto max-w-5xl px-6 py-16 sm:px-8">
-      <SectionHeading eyebrow="§ 1" title="Research Interests" />
+      <SectionHeading eyebrow="#1" title="Research Interests" />
       <ul className="mt-8 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2">
         {person.interests.map((interest) => (
           <li key={interest} className="flex items-baseline gap-3">
